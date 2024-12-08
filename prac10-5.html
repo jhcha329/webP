@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prac 10-5</title>
+        <script>
+            let clock;
+            let timeID=null;
+            function startClock() {
+                clock = document.getElementById('clock');
+                showTime();
+                timeID = setInterval('showTime()',1000);
+            }
+
+            function showTime() { 
+                let time = new Date();
+                clock.innerHTML = time.toLocaleTimeString();
+            }
+
+            function stop_start_clock() {
+                if (timeID) {
+                clearInterval(timeID);
+                timeID = null;
+                clock.style.color = 'gray';
+                }
+                else if (timeID==null){
+                    timeID = setInterval('showTime()',1000);
+                    clock.style.color = 'black';
+                }
+            }
+        </script>
+    </head>
+
+    <body onload="startClock();">
+       <h3>div 태그에 시계 만들기</h3>
+       <hr>
+       <div id="clock" onclick="stop_start_clock();">
+       </div>
+    </body>
+</html>
