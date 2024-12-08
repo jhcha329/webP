@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ex-3</title>
+    <script>
+        function askName() {
+            let ret = prompt("이름을 입력하세요");
+            if (ret == null) {
+                // 취소 버튼을 누른 경우
+                alert("이름 입력이 취소되었습니다.");
+            } else if (ret == "") {
+                // 확인만 누른 경우
+                window.open("Prac7Week4.html", "_blank");
+                alert("이름이 입력되지 않았습니다.");
+            } else {
+                // ret에 사용자가 입력한 문자열
+                alert("안녕하세요, " + ret + "님!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>3+5=?</h2>
+    <button onclick="askName()">이름 입력하기</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ex-1</title>
+</head>
+<body>
+    <h2>3+5=?</h2>
+    <form>
+        <label>
+            <input type="radio" name="answer" value="1" onclick="changeColor(this, 'span1')">
+            <span id="span1">3</span>
+        </label><br>
+        <label>
+            <input type="radio" name="answer" value="2" onclick="changeColor(this, 'span2')">
+            <span id="span2">5</span>
+        </label><br>
+        <label>
+            <input type="radio" name="answer" value="3" onclick="changeColor(this, 'span3')">
+            <span id="span3">8</span>
+        </label>
+    </form>
+
+    <script>
+        function changeColor(radio, spanId) {
+            // 모든 span 요소의 배경색 초기화
+            document.getElementById('span1').style.backgroundColor = '';
+            document.getElementById('span2').style.backgroundColor = '';
+            document.getElementById('span3').style.backgroundColor = '';
+
+            // 선택된 라디오 버튼의 배경색 변경
+            if (radio.value === "3") {
+                document.getElementById(spanId).style.backgroundColor = 'lightblue'; // 8을 클릭했을 때
+            } else {
+                document.getElementById(spanId).style.backgroundColor = 'red'; // 3 또는 5를 클릭했을 때
+            }
+        }
+    </script>
+</body>
+</html>

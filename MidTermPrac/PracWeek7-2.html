@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 7-1</title>
+<script>
+    let clock;
+    let timeID=null;
+
+    function startClock() {
+                clock = document.getElementById('clock');
+                showTime();
+                timeID = setInterval('showTime()',1000); // timeID 변수에 반복 타이머 사용
+            }
+
+    function showTime() { 
+                let time = new Date();
+                clock.innerHTML = time.toLocaleTimeString(); // 현재 시간 표시
+            }
+
+    function pauseResume() {
+            if(timeID){ // timeID에 값이 있다면, 즉 시계가 돌아가고 있다면
+                clearInterval(timeID); // 반복 타이머 해제
+                timeID = null; // timeID 비우기
+                clock.style.color = 'gray';
+            }
+            else if(timeID==null){ // timeID에 값이 비어있다면, 즉 시계가 멈춰있다면
+                timeID = setInterval('showTime()',1000); // timeID 변수에 반복 타이머 사용
+                clock.style.color = 'black'; 
+            }
+        }
+</script>
+</head>
+
+<body onload="startClock();">
+<h2>div태그에 시계 만들기</h2>
+<hr>
+<div id="clock" onclick="pauseResume()"></div>
+</body>
+</html>

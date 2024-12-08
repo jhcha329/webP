@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>DOM 객체 동적 삽입</title>
+    <script>
+    function addAnswer(obj, text){ 
+        let p = document.createElement("p"); // p 태그 객체 생성
+        p.innerHTML = text; // p 태그에 text 삽입
+        obj.parentElement.appendChild(p); // parentElement는 <div>를 가리킴
+    }
+
+    function removeAnswer(obj) {
+        let answers = obj.parentElement.getElementsByTagName("p"); // <div> 안의 모든 <p> 태그를 가져옴
+        if (answers.length > 1) { // 첫 번째 질문 <p> 제외, 두 번째 정답 <p>부터 삭제 가능
+            obj.parentElement.removeChild(answers[answers.length - 1]); // 마지막 <p> 삭제
+        }
+    }
+
+    </script>
+</head>
+
+<body>
+    <h3>정답의 동적 삽입 및 삭제</h3>
+    <hr>
+    <div>
+        <p>Q. 거울아 거울아 세상에서 누가 제일 예쁘니?</p>
+        <button onclick="addAnswer(this, '백설공주')">답보기</button>
+        <button onclick="removeAnswer(this)">답 삭제</button>
+    </div>
+</body>
+</html>
