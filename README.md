@@ -21,10 +21,9 @@ Week8-10.html
 이벤트 정의, 핸들링, 실습 <br>
 실습 <br>
 Week9-2.html
-week6-prac2.html
 과제2
-practice9-6.html
-practice9-10.html
+prac9-6.html
+prac9-10.html
 <h3>Week 7</h3>
 실습문제
 ex10-4.html
