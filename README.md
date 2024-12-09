@@ -16,11 +16,11 @@ prac8-4.html: 실습문제 8-4 <br>
 prac8-6.html: 실습문제 8-6 <br>
 prac8-9.html
 과제1
-Week8-10.html
+report1 8-10.html
 <h3>Week 6</h3>
 이벤트 정의, 핸들링, 실습 <br>
 실습 <br>
-Week9-2.html
+prac9-2.html
 과제2
 prac9-6.html
 prac9-10.html
@@ -28,21 +28,19 @@ prac9-10.html
 실습문제
 ex10-4.html
 prac10-5.html
+parc10-6.html
 중간고사
 
 <h3>Week 9</h3>
 웹스토리지
-index.html
-ex12-1.html
+ex12.html
 <h3>Week 10</h3>
 오디오, 비디오 제어, 웹워커
-ex13-9.html
-ex13-10.html
 timer.js
-multiply.js
 <h3>Week 11</h3>
 JavaScript1
 dg.js
+dg.html
 
 <h3>Week 12</h3>
 JavaScript2
